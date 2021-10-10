@@ -1,13 +1,19 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Button from '@material-ui/core/Button';
+import './index.css';
+import Primeiro from './components/basico/Primeiro';
+import ComPropriedade from './components/basico/ComPropriedade';
 
-const teste = () => {
-  return (
-    <Button>
-      ola
-    </Button>
-  );
-}
 
-export default teste;
+ReactDOM.render(
+  <div>
+    <Primeiro />
+    <ComPropriedade
+      titulo="Situação do Aluno"
+      aluno="Pedro França"
+      nota={6.5}
+    />
+  </div>,  
+  document.getElementById('root')
+);
